@@ -40,7 +40,7 @@ public class bird_script : MonoBehaviour
         my_body.GetComponent<Renderer>().enabled = false;
         if (is_spawned == false)
         {
-            Instantiate(Boom, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(Boom, transform.position, transform.rotation);
             my_explosion.Play();
         }
         is_spawned = true;
